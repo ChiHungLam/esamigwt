@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package it.pep.hibernate;
+package it.pep.EsamiGWT.server;
 
 
 import org.hibernate.cfg.Configuration;
