@@ -2,11 +2,27 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <servlet>
         <servlet-name>LoginService</servlet-name>
-        <servlet-class>it.pep.server.LoginServiceImpl</servlet-class>
+        <servlet-class>it.pep.EsamiGWT.server.LoginServiceImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArgomentiService</servlet-name>
+        <servlet-class>it.pep.EsamiGWT.server.ArgomentiServiceImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AppelliService</servlet-name>
+        <servlet-class>it.pep.EsamiGWT.server.AppelliServiceImpl</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginService</servlet-name>
-        <url-pattern>/it.pep.Main/loginservice</url-pattern>
+        <url-pattern>/it.pep.EsamiGWT.Main/loginservice</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArgomentiService</servlet-name>
+        <url-pattern>/it.pep.EsamiGWT.Main/argomentiservice</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AppelliService</servlet-name>
+        <url-pattern>/it.pep.EsamiGWT.Main/appelliservice</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

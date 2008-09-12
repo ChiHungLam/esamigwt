@@ -1,4 +1,4 @@
-package it.pep.utility;
+package it.pep.EsamiGWT.utility;
 
 // Copyright (c) 2006 Damien Miller <djm@mindrot.org>
 //
