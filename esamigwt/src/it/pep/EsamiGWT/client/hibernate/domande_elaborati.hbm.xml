@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="it.pep.EsamiGWT.hibernate.Argomenti" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+  <class name="it.pep.EsamiGWT.client.hibernate.DomandeElaborati" table="DOMANDE_ELABORATI">
+    <id column="ID" name="ID">
+      <generator class="increment"/>
+    </id>
+    <property column="DOMANDA" length="300" name="domanda" type="string"/>
+    <property column="RISP1" length="200" name="risp1" type="string"/>
+    <property column="RISP2" length="200" name="risp2" type="string"/>
+    <property column="RISP3" length="200" name="risp3" type="string"/>
+    <property column="RISP4" length="200" name="risp4" type="string"/>
+    <property column="RISP5" length="200" name="risp5" type="string"/>
+    <property column="IDDOMANDA" name="idDomanda" type="integer"/>
+    <property column="IDELABORATO" name="idElaborato" type="integer"/>
+    <property column="ESATTA" name="esatta" type="integer"/>
+    <property column="FORNITA" name="fornita" type="integer"/>
+    <property column="ESITO" name="esito" type="string"/>
+  </class>
+</hibernate-mapping>

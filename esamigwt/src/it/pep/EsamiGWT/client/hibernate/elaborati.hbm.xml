@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="it.pep.EsamiGWT.hibernate.Argomenti" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+  <class name="it.pep.EsamiGWT.client.hibernate.Elaborati" table="ELABORATI">
+    <id column="ID" name="ID">
+      <generator class="increment"/>
+    </id>
+    <property column="GRUPPO" name="gruppo" type="integer"/>
+    <property column="MATRICOLASTUDENTE" length="50" name="matricolaStudente" type="string"/>
+    <property column="NOMESTUDENTE" length="50" name="nomeStudente" type="string"/>
+    <property column="COGNOMESTUDENTE" length="50" name="cognomeStudente" type="string"/>
+    <property column="NOTE" length="50" name="note" type="string"/>
+    <property name="punteggio" type="float">
+      <column default="0" name="PUNTEGGIO"/>
+    </property>
+    <property column="IDAPPELLO" name="idAppello" type="integer"/>
+  </class>
+</hibernate-mapping>

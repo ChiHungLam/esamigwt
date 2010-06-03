@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="it.pep.EsamiGWT.client.hibernate.Utenti" table="UTENTI">
+    <id column="UTENTE" length="50" name="utente" type="string">
+        </id>
+    <property column="PASSWORD" length="100" name="password" type="string"/>
+    <property name="abilitato" type="java.lang.Boolean">
+      <column default="false" name="ABILITATO"/>
+    </property>
+    <property name="scadenzaSottoscrizione" type="java.util.Date">
+      <column name="SCADENZA_SOTTOSCRIZIONE" sql-type="date"/>
+    </property>
+    <property column="ACTIVATION_CODE" length="100" name="activationCode" type="string"/>
+  </class>
+</hibernate-mapping>

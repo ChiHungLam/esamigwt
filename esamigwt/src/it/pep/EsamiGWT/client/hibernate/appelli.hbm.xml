@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="it.pep.EsamiGWT.hibernate.Argomenti" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+  <class name="it.pep.EsamiGWT.client.hibernate.Appelli" table="APPELLI">
+    <id column="ID" name="ID">
+      <generator class="increment"/>
+    </id>
+    <property name="dataAppello" type="java.util.Date">
+      <column name="DATA_APPELLO" sql-type="date"/>
+    </property>
+    <property column="DESCRIZIONE" name="descrizione" type="string"/>
+    <property column="COD_UTENTE" length="50" name="codUtente" type="string"/>
+  </class>
+</hibernate-mapping>

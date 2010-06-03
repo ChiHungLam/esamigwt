@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory name="session1">
+   <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+    <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost</property>
+    <property name="hibernate.connection.username">sa</property>
+<!--     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://10.10.10.212/esamiGWT</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="connection.password">pep2008</property>
+-->
+
+    <property name="hibernate.show_sql">false
+        </property>
+    <property name="hibernate.current_session_context_class">thread
+        </property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/utenti.hbm.xml"/>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/argomenti.hbm.xml"/>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/domande.hbm.xml"/>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/appelli.hbm.xml"/>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/elaborati.hbm.xml"/>
+    <mapping resource="it/pep/EsamiGWT/client/hibernate/domande_elaborati.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
