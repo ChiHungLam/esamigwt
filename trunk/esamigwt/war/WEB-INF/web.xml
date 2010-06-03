@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app     PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"     "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<context-param>
+		<description>max size of the upload request</description>
+		<param-name>maxSize</param-name>
+		<param-value>5000000</param-value>
+	</context-param>
+	<context-param>
+		<description>useful in development mode to see the upload progress bar in fast networks</description>
+		<param-name>slowUploads</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>LoginService</servlet-name>
+		<servlet-class>it.pep.EsamiGWT.server.LoginServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>BusinessService</servlet-name>
+		<servlet-class>it.pep.EsamiGWT.server.BusinessServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RisultatiServlet</servlet-name>
+		<servlet-class>it.pep.EsamiGWT.server.servlet.RisultatiServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConfermaIscrizione</servlet-name>
+		<servlet-class>it.pep.EsamiGWT.server.servlet.ConfermaIscrizione</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MioBarcodeServlet</servlet-name>
+		<servlet-class>it.pep.EsamiGWT.server.servlet.MioBarcodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>/esamigwt/loginservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BusinessService</servlet-name>
+		<url-pattern>/esamigwt/businessservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RisultatiServlet</servlet-name>
+		<url-pattern>/RisultatiServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConfermaIscrizione</servlet-name>
+		<url-pattern>/ConfermaIscrizione</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MioBarcodeServlet</servlet-name>
+		<url-pattern>/MioBarcodeServlet</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>EsamiGWT.html</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="it.pep.EsamiGWT.hibernate.Argomenti" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+  <class name="it.pep.EsamiGWT.client.hibernate.Argomenti" table="ARGOMENTI">
+    <id column="ID" name="ID">
+      <generator class="increment"/>
+    </id>
+    <property column="DESCRIZIONE" name="descrizione" type="string"/>
+    <property column="COD_UTENTE" length="50" name="codUtente" type="string"/>
+    <property name="pubblico" type="java.lang.Boolean">
+      <column default="false" name="PUBBLICO"/>
+    </property>
+    <property name="numDomande" type="integer">
+      <column default="0" name="NUM_DOMANDE"/>
+    </property>
+  </class>
+</hibernate-mapping>

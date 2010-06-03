@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="it.pep.EsamiGWT.hibernate.Domande" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+  <class name="it.pep.EsamiGWT.client.hibernate.Domande" table="DOMANDE">
+    <id column="ID" name="ID">
+      <generator class="increment"/>
+    </id>
+    <property column="DOMANDA" name="domanda" type="string"/>
+    <property column="RISP1" name="risp1" type="string"/>
+    <property column="RISP2" name="risp2" type="string"/>
+    <property column="RISP3" name="risp3" type="string"/>
+    <property column="RISP4" name="risp4" type="string"/>
+    <property column="RISP5" name="risp5" type="string"/>
+    <property column="IDARGOMENTO" name="idArgomento"/>
+    <property column="UTILIZZATO" name="utilizzato" type="boolean"/>
+  </class>
+</hibernate-mapping>
